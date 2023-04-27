@@ -1,0 +1,34 @@
+.form-controller{
+    height: 450px;
+    width: 350px;
+    margin: 20px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.form-title{
+    text-align: center;
+}
+.form-control{
+    padding-left: 40px;
+    margin-bottom: 10px;
+    
+}
+.form-control label{
+    display: block;
+    margin-bottom: 10px;
+}
+.form-control input{
+    height: 30px;
+    width: 250px;
+    padding-left: 10px;
+}
+.btn-submit{
+    margin-top: 20px;
+    height: 35px;
+    width: 267px;
+    background-color: bisque;
+    border: none;
+}
+.btn-submit:hover{
+    background-color: burlywood;
+}
