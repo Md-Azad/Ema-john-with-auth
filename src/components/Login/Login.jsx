@@ -42,7 +42,9 @@ const Login = () => {
             required
           />
           <p onClick={() => setShow(!show)}>
-            <small>{show ? <span>Hide</span> : <span>Show</span>}</small>
+            <small>
+              {show ? <span>Hide Password</span> : <span>Show Password</span>}
+            </small>
           </p>
         </div>
 
