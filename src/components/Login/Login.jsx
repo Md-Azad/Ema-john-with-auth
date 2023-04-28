@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { AuthContext } from "../../AuthProviders/AuthProvider";
@@ -6,6 +6,7 @@ import { AuthContext } from "../../AuthProviders/AuthProvider";
 const Login = () => {
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [show, setShow] = useState(true);
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   const handleLogin = (event) => {
@@ -35,12 +36,16 @@ const Login = () => {
         <div className="form-control">
           <label htmlFor="password">Password</label>
           <input
-            type="password"
+            type={show ? "text" : "password"}
             name="password"
             placeholder="Your password"
             required
           />
+          <p onClick={() => setShow(!show)}>
+            <small>{show ? <span>Hide</span> : <span>Show</span>}</small>
+          </p>
         </div>
+
         <div className="form-control">
           <button className="btn-submit">Login</button>
         </div>
